@@ -17,12 +17,12 @@
   --lig: 61%;
   --first-color: hsl(var(--hue), var(--sat), var(--lig));
   --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
-  --title-color: hsl(var(--hue), 12%, 95%);
-  --text-color: hsl(var(--hue), 12%, 75%);
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 12%, 45%);
   --text-color-light: hsl(var(--hue), 8%, 75%);
   --text-color-lighten: hsl(var(--hue), 8%, 92%);
-  --body-color: hsl(var(--hue), 40%, 8%);
-  --container-color: hsl(var(--hue), 24%, 12%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #fff;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -94,9 +94,9 @@ img {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --title-color: hsl(var(--hue), 12%, 15%);
-  --text-color: hsl(var(--hue), 12%, 45%);
-  --body-color: hsl(var(--hue), 100%, 99%);
+  --title-color: hsl(var(--hue), 12%, 95%);
+  --text-color: hsl(var(--hue), 12%, 75%);
+  --body-color: hsl(var(--hue), 40%, 8%);
   --container-color: hsl(var(--hue), 24%, 12%);
 }
 
@@ -105,7 +105,7 @@ body.dark-theme {
     the website, in light theme
 ==========*/
 .dark-theme .button__gray {
-  background-color: hsl(var(--hue), 24%, 12%);;
+  background-color: var(--container-color);
 }
 
 .dark-theme .button__gray:hover {
@@ -319,9 +319,26 @@ body.dark-theme {
 
 .projects__card img {
   width: 100%;
-  height: 100%;
+  height: 50%;
+}
+.projects__card h3 {
+  font-family: Rubik,sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
 }
 
+.projects__card span{
+  display: block;
+  font-size: 1.50rem;
+  font-weight: bold;
+  text-decoration: underline blue 0.5px;
+}
+.projects__card{
+  width: 330px;
+  height: 440px;
+  background-color: rgb(255, 255, 255);
+}
 .projects__modal {
   position: absolute;
   width: 100%;
@@ -339,7 +356,10 @@ body.dark-theme {
 
 .projects__subtitle, 
 .projects__title {
-  color: #fff;
+  color: rgb(0, 0, 0);
+  padding-left: 5%;
+  padding-bottom: 0%;
+  margin-bottom: 0px;
 }
 
 .projects__subtitle {
